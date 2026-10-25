@@ -3,209 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aeternix — Claim Leakage Dashboard</title>
+  <title>Mock Test Page</title>
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #17202a;
-    }
-    header {
       background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 18px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.4px;
-    }
-    .subtitle {
-      color: #6b7280;
-      font-size: 13px;
-      margin-top: 4px;
-    }
-    .user {
-      font-size: 13px;
-      color: #4b5563;
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 28px;
-    }
-    .page-title {
-      margin-bottom: 22px;
+      color: #111827;
     }
     h1 {
       margin: 0;
-      font-size: 28px;
-    }
-    .muted { color: #6b7280; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .card, .panel {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 18px;
-    }
-    .card-label {
-      color: #6b7280;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-    .card-value {
-      font-size: 25px;
-      font-weight: 700;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 20px;
-    }
-    .panel h2 {
-      margin: 0 0 14px;
-      font-size: 17px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-    th, td {
-      text-align: left;
-      padding: 11px 8px;
-      border-bottom: 1px solid #eef0f2;
-    }
-    th { color: #6b7280; font-weight: 600; }
-    .status {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f1f5f9;
-      font-size: 11px;
-    }
-    .actions {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    button {
-      border: 0;
-      border-radius: 7px;
-      padding: 10px 14px;
-      cursor: pointer;
-      background: #17202a;
-      color: white;
-    }
-    button.secondary {
-      background: #e5e7eb;
-      color: #17202a;
-    }
-    .note {
-      margin-top: 18px;
-      padding: 12px 14px;
-      background: #f8fafc;
-      border-left: 3px solid #94a3b8;
-      font-size: 13px;
-      color: #475569;
-    }
-    @media (max-width: 800px) {
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 500px) {
-      .cards { grid-template-columns: 1fr; }
-      main { padding: 18px; }
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 500;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div>
-    <div class="brand">Aeternix</div>
-    <div class="subtitle">Claim Leakage Tracker</div>
-  </div>
-  <div class="user">Team Dashboard · Prototype</div>
-</header>
-
-<main>
-  <div class="page-title">
-    <h1>Claim Leakage Dashboard</h1>
-    <div class="muted">Basic sandbox — data is currently static.</div>
-  </div>
-
-  <div class="actions">
-    <button onclick="alert('New claim form will be added here.')">+ New Claim</button>
-    <button class="secondary" onclick="alert('Import workflow will be added here.')">Import Claims</button>
-  </div>
-
-  <section class="cards">
-    <div class="card">
-      <div class="card-label">Total Claims</div>
-      <div class="card-value">0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Unrecovered Shortfall</div>
-      <div class="card-value">₹0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Open Queries</div>
-      <div class="card-value">0</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Realization Rate</div>
-      <div class="card-value">—</div>
-    </div>
-  </section>
-
-  <section class="grid">
-    <div class="panel">
-      <h2>Recent Claims</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Claim ID</th>
-            <th>Department</th>
-            <th>Payer</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="4" class="muted">No claims entered yet.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="panel">
-      <h2>Leakage Areas</h2>
-      <table>
-        <tr><th>Category</th><th>Amount</th></tr>
-        <tr><td>Queries</td><td>₹0</td></tr>
-        <tr><td>Deductions</td><td>₹0</td></tr>
-        <tr><td>Settlement</td><td>₹0</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <div class="note">
-    Prototype only. The production version should connect this interface to the five linked
-    claim tables: Claim Header, Stage Log, Query Log, Deduction Lines, and Settlement & Recovery.
-  </div>
-</main>
-
+  <main>
+    <h1>This is a mock test page.</h1>
+  </main>
 </body>
 </html>
